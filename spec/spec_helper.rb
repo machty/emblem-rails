@@ -3,15 +3,13 @@ ENV["RAILS_ENV"] = "test"
 require 'bundler'
 Bundler.require(:default, :test)
 
-require 'ember_script-rails'
+require 'rails'
+require 'emblem-rails'
 
 PROJECT_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..')).freeze
 $LOAD_PATH << File.join(PROJECT_ROOT, 'lib')
 
 require File.expand_path("../support/dummy_app/config/environment.rb",  __FILE__)
-
-
-# require 'rspec/rails'
 
 require 'rspec/core'
 
